@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg,
+        rgb(14, 113, 150) 1%,
+        rgb(67, 144, 146) 99%
+    );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+/* Estilos para el header */
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 3rem;
+}
+/* Estilos para el contenedor principal */
+#input-texto::placeholder,
+#input-codificado::placeholder {
+    white-space: nowrap;
+    text-align: center;
+    color: rgb(117, 180, 204);
+    font-size: 1.8rem;
+    line-height: 4;
+    vertical-align: middle;
+}
+
+#btn-opcion{
+    background-color: rgb(203, 108, 230);
+    color: rgb(255, 255, 255)
+}
+
+#collapseOpciones .card{
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.opcion-codificacion{
+    background-color: rgb(255, 255, 255);
+    color: rgb(203, 108, 230);
+    text-decoration: none;
+    margin-top: 0.2rem;
+}
+
+.opcion-codificacion.active,
+.opcion-codificacion:active,
+.opcion-codificacion:hover,
+.opcion-codificacion:focus {
+    background-color: rgb(203, 108, 230);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#btn-confirmar{
+    background-color: rgb(0, 191, 99);
+    color: rgb(255, 255, 255);
+}
+
+#btn-confirmar:hover{
+    background-color: rgb(0, 150, 80);
+}
+
+/* Permitir wrap en el texto codificado */
+#resultado-huffman .text-monospace {
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+#btn-volver{
+    background-color: rgb(255, 255, 255);
+    color: rgb(203, 108, 230);
+}
+
+#btn-volver:hover{
+    background-color: rgb(203, 108, 230);
+    color: rgb(255, 255, 255);
+}
+
+#chevron-icon i {
+    font-size: 4rem;
+    color: #fff;
+    transition: transform 0.2s;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Codificador Binario</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="container-fluid py-3">
+            <h1 class="display-3">Codificador Binario</h1>
+        </header>
+        <main class="container my-4">
+            <div class="row justify-content-center">
+                <div id="contenido-inicial" class="col-md-8">
+                    <textarea class="form-control form-control-lg mb-3" rows="5" placeholder="Elija una opción" id="input-texto"></textarea>
+                    <textarea class="form-control form-control-lg mb-3 d-none" rows="5" id="input-codificado"></textarea>
+
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="mb-3 col-12 col-sm-8 col-md-6 col-lg-4">
+                            <button class="btn w-100 py-3 fs-4 rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOpciones" aria-expanded="false" aria-controls="collapseOpciones" id="btn-opcion">
+                                Elegir opción <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="collapse" id="collapseOpciones">
+                                <div class="card card-body">
+                                    <button class="btn opcion-codificacion fs-5 py-3 rounded-5" data-value="codificar" type="button">Codificar</button>
+                                    <button class="btn opcion-codificacion fs-5 py-3 rounded-5" data-value="decodificar" type="button">Decodificar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                            <button class="btn w-100 py-3 fs-4 rounded-5 fw-bold" id="btn-confirmar">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Resultado principal -->
+                <div id="resultado-huffman" class="d-none text-center">
+                    <div class="row align-items-center justify-content-center mb-4 flex-md-row flex-column">
+                        <div class="col-12 col-md-5 mb-2 mb-md-0 d-flex justify-content-center">
+                            <textarea class="form-control text-center resultado-textarea" rows="5" readonly id="textarea-entrada"></textarea>
+                        </div>
+                        <div class="col-12 col-md-1 d-flex justify-content-center align-items-center mb-2 mb-md-0">
+                            <span id="chevron-icon">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-5 d-flex justify-content-center">
+                            <textarea class="form-control text-center resultado-textarea" rows="5" readonly id="textarea-salida"></textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-12 mb-4 d-flex align-items-center justify-content-center">
+                            <span class="fs-4 text-light me-2">Tasa de compresión:</span>
+                            <input type="text" class="form-control text-center w-auto d-inline-block" id="tasa-compresion" readonly>
+                        </div>
+                        <div class="col-12 mb-4 d-flex align-items-center justify-content-center">
+                            <span class="fs-4 text-light me-2">Eficiencia:</span>
+                            <input type="text" class="form-control text-center w-auto d-inline-block" id="eficiencia" readonly>
+                        </div>
+                        <div class="col-12 mb-4 d-flex align-items-center justify-content-center">
+                            <span class="fs-4 text-light me-2">Longitud promedio de código:</span>
+                            <input type="text" class="form-control text-center w-auto d-inline-block" id="longitud-promedio" readonly>
+                        </div>
+                    </div>
+                    <button id="btn-volver" class="btn py-2 w-50 fs-4 rounded-5 fw-bold">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </button>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
